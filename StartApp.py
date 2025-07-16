@@ -11,13 +11,13 @@ def main():
     try:
         # Testar importações
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("🔧 Verificando configurações...")
+        print("Verificando configurações...")
         import matplotlib.pyplot as plt
         import yfinance as yf
         import pandas as pd
         import numpy as np
         
-        print("✅ Todas as bibliotecas carregadas com sucesso!")
+        print("Todas as bibliotecas carregadas com sucesso!")
         
         # Iniciar sistema
         print("🚀 Iniciando Sistema de Análise Financeira B3...")
@@ -25,11 +25,11 @@ def main():
         analisador.executar()
         
     except ImportError as e:
-        print(f"❌ Erro de importação: {e}")
-        print("📥 Instale as dependências com: pip install -r requirements.txt")
+        print(f"Erro de importação: {e}")
+        print("Instale as dependências com: pip install -r requirements.txt")
         input("Pressione Enter para sair...")
     except Exception as e:
-        print(f"❌ Erro inesperado: {e}")
+        print(f"Erro inesperado: {e}")
         input("Pressione Enter para sair...")
 
 if __name__ == "__main__":

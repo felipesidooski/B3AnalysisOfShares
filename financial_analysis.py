@@ -68,9 +68,9 @@ class AnalisadorB3:
     
     def aguardar_fechamento_grafico(self):
         """Aguarda o usuário fechar o gráfico para continuar"""
-        print("\n📊 Gráfico interativo exibido na tela!")
-        print("🖱️  Passe o mouse sobre os pontos para ver os valores")
-        print("🔴 Feche a janela do gráfico para continuar...")
+        print("\n Gráfico interativo exibido na tela!")
+        print("  Passe o mouse sobre os pontos para ver os valores")
+        print("  Feche a janela do gráfico para continuar...")
         
         # Aguarda todas as figuras serem fechadas
         while plt.get_fignums():
@@ -154,11 +154,11 @@ class AnalisadorB3:
             self.dados_acao = dados
             self.nome_empresa = nome_empresa
             
-            print(f"✅ Dados baixados: {len(dados)} registros")
+            print(f"Dados baixados: {len(dados)} registros")
             return True
             
         except Exception as e:
-            print(f"❌ Erro ao baixar dados: {e}")
+            print(f"Erro ao baixar dados: {e}")
             return False
     
     def calcular_retornos(self):
@@ -184,10 +184,10 @@ class AnalisadorB3:
     def mostrar_resumo_acoes(self):
         """Opção 1: Mostra resumo da ação atual"""
         if self.dados_acao is None:
-            print("❌ Nenhuma ação carregada!")
+            print("Nenhuma ação carregada!")
             return
         
-        print(f"\n📊 RESUMO - {self.nome_empresa} ({self.acao_atual})")
+        print(f"\nRESUMO - {self.nome_empresa} ({self.acao_atual})")
         print("="*60)
         
         # Dados básicos
@@ -239,7 +239,7 @@ class AnalisadorB3:
     def grafico_volatilidade_semana(self):
         """Opção 2: Gráfico de volatilidade da última semana"""
         if self.dados_acao is None:
-            print("❌ Nenhuma ação carregada!")
+            print("Nenhuma ação carregada!")
             return
         
         volatilidade = self.calcular_volatilidade(7)
@@ -280,7 +280,7 @@ class AnalisadorB3:
     def grafico_volatilidade_mes(self):
         """Opção 3: Gráfico de volatilidade do último mês"""
         if self.dados_acao is None:
-            print("❌ Nenhuma ação carregada!")
+            print("Nenhuma ação carregada!")
             return
         
         volatilidade = self.calcular_volatilidade(7)
@@ -333,7 +333,7 @@ class AnalisadorB3:
     def grafico_retorno_semanal(self):
         """Opção 4: Gráfico de retorno semanal"""
         if self.dados_acao is None:
-            print("❌ Nenhuma ação carregada!")
+            print("Nenhuma ação carregada!")
             return
         
         retornos_diarios, retornos_semanais = self.calcular_retornos()
@@ -404,7 +404,7 @@ class AnalisadorB3:
     def grafico_retorno_mensal(self):
         """Opção 5: Gráfico de retorno mensal"""
         if self.dados_acao is None:
-            print("❌ Nenhuma ação carregada!")
+            print("Nenhuma ação carregada!")
             return
         
         # Calcular retorno acumulado do período
@@ -484,7 +484,7 @@ class AnalisadorB3:
             print("s - Sair/fechar aplicação")
             print("="*60)
             
-            opcao = input("👉 Escolha uma opção: ").lower().strip()
+            opcao = input("Escolha uma opção: ").lower().strip()
             
             if opcao == '1':
                 self.mostrar_resumo_acoes()
@@ -506,11 +506,11 @@ class AnalisadorB3:
                 return
                 
             elif opcao == 's':
-                print("👋 Encerrando aplicação...")
+                print("Encerrando aplicação...")
                 sys.exit()
                 
             else:
-                print("❌ Opção inválida!")
+                print("Opção inválida!")
                 input("Pressione Enter para continuar...")
     
     def menu_empresas(self, tipo='brasileiras'):
@@ -540,17 +540,17 @@ class AnalisadorB3:
                 if self.baixar_dados_acao(codigo_acao, nome_empresa):
                     self.menu_acao()
                 else:
-                    input("❌ Erro ao carregar dados. Pressione Enter para continuar...")
+                    input("Erro ao carregar dados. Pressione Enter para continuar...")
                     
             elif opcao == 'r':
                 return
                 
             elif opcao == 's':
-                print("👋 Encerrando aplicação...")
+                print("Encerrando aplicação...")
                 sys.exit()
                 
             else:
-                print("❌ Opção inválida!")
+                print("Opção inválida!")
                 input("Pressione Enter para continuar...")
     
     def menu_principal(self):
@@ -558,14 +558,14 @@ class AnalisadorB3:
         while True:
             self.limpar_tela()
             print("="*60)
-            print("🚀 SISTEMA DE ANÁLISE FINANCEIRA B3")
+            print("SISTEMA DE ANÁLISE FINANCEIRA B3")
             print("="*60)
             print("1 - Listar as 10 maiores empresas brasileiras listadas na B3")
             print("2 - Listar as 10 maiores empresas estrangeiras listadas na B3")  
             print("s - Sair/fechar aplicação")
             print("="*60)
             
-            opcao = input("👉 Escolha uma opção: ").lower().strip()
+            opcao = input("Escolha uma opção: ").lower().strip()
             
             if opcao == '1':
                 self.menu_empresas('brasileiras')
@@ -578,29 +578,29 @@ class AnalisadorB3:
                 sys.exit()
                 
             else:
-                print("❌ Opção inválida!")
+                print("Opção inválida!")
                 input("Pressione Enter para continuar...")
     
     def executar(self):
         """Executa o sistema"""
         try:
-            print("🚀 Iniciando Sistema de Análise Financeira B3...")
-            print("📊 Configurando interface gráfica...")
+            print("Iniciando Sistema de Análise Financeira B3...")
+            print("Configurando interface gráfica...")
             
             # Teste rápido do matplotlib
             plt.figure(figsize=(1,1))
             plt.close()
             
-            print("✅ Interface gráfica configurada com sucesso!")
+            print("Interface gráfica configurada com sucesso!")
             input("Pressione Enter para continuar...")
             
             self.menu_principal()
             
         except KeyboardInterrupt:
-            print("\n👋 Aplicação interrompida pelo usuário.")
+            print("\nAplicação interrompida pelo usuário.")
             sys.exit()
         except Exception as e:
-            print(f"❌ Erro inesperado: {e}")
+            print(f"Erro inesperado: {e}")
             input("Pressione Enter para sair...")
             sys.exit()
 
