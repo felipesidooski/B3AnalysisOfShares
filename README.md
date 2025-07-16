@@ -1,8 +1,8 @@
-# 📊 Sistema de Análise Financeira B3
+# Sistema de Análise Financeira B3
 
 Sistema interativo em Python para análise das maiores empresas brasileiras e estrangeiras listadas na B3.
 
-## 🚀 Características
+## Características
 
 - **Menu interativo** com navegação completa
 - **Gráficos interativos** com valores ao passar o mouse 🖱️
@@ -11,20 +11,17 @@ Sistema interativo em Python para análise das maiores empresas brasileiras e es
 - **20 empresas** pré-selecionadas (10 brasileiras + 10 estrangeiras)
 - **5 tipos de análise** por ação com visualizações avançadas
 
-## 📋 Instalação Rápida
+## Instalação Rápida
 
 ```bash
 # 1. Instalar dependências
 pip install -r requirements.txt
 
-# 2. Testar sistema
-python teste_sistema.py
-
-# 3. Executar aplicação
-python exemplo_uso.py
+# 2. Executar aplicação
+python StartApp.py
 ```
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - **Python 3.8+** (recomendado 3.9+)
 - **Conexão com internet** (para dados financeiros)
@@ -34,10 +31,10 @@ python exemplo_uso.py
 
 Para instruções específicas do seu sistema operacional, veja: **[INSTALACAO.md](INSTALACAO.md)**
 
-## 🎯 Como usar
+## Como usar
 
 ```bash
-python exemplo_uso.py
+python StartApp.py
 ```
 
 ## 📊 Estrutura de Menus
@@ -63,7 +60,7 @@ MENU AÇÃO
 └── s - Sair
 ```
 
-## 🏢 Empresas Disponíveis
+## Empresas Disponíveis
 
 ### Brasileiras
 1. Petrobras (PETR4)
@@ -89,14 +86,14 @@ MENU AÇÃO
 9. Coca-Cola (COCA34)
 10. Disney (DISB34)
 
-## 🖥️ Comportamento dos Gráficos Interativos
+## Comportamento dos Gráficos Interativos
 
-### 📊 **NOVA FUNCIONALIDADE: Gráficos Interativos**
-- **🖱️ Passe o mouse** sobre pontos/barras para ver valores precisos
-- **📅 Data e valor** aparecem em tooltip amarelo
-- **📍 Valores destacados** automaticamente (máximo, mínimo, final)
-- **📈 Anotações visuais** em pontos importantes
-- **🔍 Interação em tempo real** - sem cliques necessários
+### Gráficos Interativos**
+- **Passe o mouse** sobre pontos/barras para ver valores precisos
+- **Data e valor** aparecem em tooltip amarelo
+- **Valores destacados** automaticamente (máximo, mínimo, final)
+- **Anotações visuais** em pontos importantes
+- **Interação em tempo real** - sem cliques necessários
 
 ### Características dos Gráficos
 - Gráficos abrem em **janela separada**
@@ -105,38 +102,38 @@ MENU AÇÃO
 - **Interatividade total** com mouse hover
 - **Valores precisos** com data/hora
 
-## 📈 Tipos de Análise Interativa
+## Tipos de Análise Interativa
 
-### 1. **Resumo da Ação** 📋
+### 1. **Resumo da Ação**
 - Tabela completa com métricas principais
 - Preços, volumes, retornos e volatilidade
 - Valores atualizados em tempo real
 
-### 2. **Volatilidade Semanal** 📊
+### 2. **Volatilidade Semanal**
 - **Interativo**: Passe o mouse para ver volatilidade por dia
 - Últimos 7 dias com valores precisos
 - Tooltips com data e percentual
 - Marcadores em cada ponto
 
-### 3. **Volatilidade Mensal** 📈
+### 3. **Volatilidade Mensal**
 - **Interativo**: Hover para ver volatilidade diária
 - Últimos 30 dias com área preenchida
 - Destacas automáticos de máximo e mínimo
 - Tooltips com data e valor
 
-### 4. **Retorno Semanal** 📊
+### 4. **Retorno Semanal**
 - **Interativo**: Hover sobre barras para detalhes
 - Barras coloridas (verde=ganho, vermelho=perda)
 - Valores sobre cada barra
 - Tooltips com data e retorno exato
 
-### 5. **Retorno Mensal** 📈
+### 5. **Retorno Mensal**
 - **Interativo**: Hover para retorno acumulado por dia
 - Curva de performance completa
 - Marcação de valores finais, máximos e mínimos
 - Área preenchida para melhor visualização
 
-## 🖱️ Como Usar a Interatividade
+## Como Usar a Interatividade
 
 ### **Mouse Hover** (Passar o mouse)
 1. **Abra qualquer gráfico** (opções 2-5)
@@ -146,12 +143,12 @@ MENU AÇÃO
 5. **Não precisa clicar** - só mover o mouse
 
 ### **Informações Mostradas**
-- **📅 Data**: Dia/mês/ano do ponto
-- **📊 Valor**: Número preciso (%, R$, etc.)
-- **📍 Posição**: Índice/coordenada
-- **🎯 Destaque**: Máximos, mínimos, valores finais
+- **Data**: Dia/mês/ano do ponto
+- **Valor**: Número preciso (%, R$, etc.)
+- **Posição**: Índice/coordenada
+- **Destaque**: Máximos, mínimos, valores finais
 
-## 💡 Dicas de Uso
+## Dicas de Uso
 
 - **Conexão com internet** obrigatória
 - **Dados baixados** apenas quando necessário
@@ -160,7 +157,7 @@ MENU AÇÃO
 - Use **'r'** para retornar, **'s'** para sair
 - **Gráficos podem demorar** alguns segundos para carregar
 
-## 🔧 Arquivos do Projeto
+## Arquivos do Projeto
 
 ### Principais
 - `financial_analysis.py` - Sistema principal com gráficos interativos
@@ -169,59 +166,36 @@ MENU AÇÃO
 
 ### Documentação
 - `README.md` - Este arquivo
-- `INSTALACAO.md` - Guia de instalação detalhado
-- `guia_visualizacoes.py` - Guia completo de uso
 
-### Testes
-- `teste_sistema.py` - Teste completo do sistema
-
-## 🧪 Testando o Sistema
-
-```bash
-# Teste completo (recomendado)
-python teste_sistema.py
-
-# Teste manual rápido
-python -c "import pandas, numpy, matplotlib, yfinance, seaborn; print('✅ OK')"
-
-# Teste de interatividade
-python -c "import matplotlib.pyplot as plt; plt.ion(); print('✅ Interativo OK')"
-```
-
-## ⚠️ Solução de Problemas
-
-### Gráficos não aparecem
+### Gráficos (Caso não aparecam)
 - **Linux**: `sudo apt install python3-tk`
 - **Windows**: Reinstale Python com "tcl/tk and IDLE"
 - **Mac**: `brew install python-tk`
 
 ### Interatividade não funciona
 ```bash
-# Verifique backend matplotlib
+# Verificando backend matplotlib
 python -c "import matplotlib; print(matplotlib.get_backend())"
 
-# Deve mostrar 'TkAgg' ou similar
 # Se mostrar 'Agg', reinstale matplotlib
 pip install matplotlib --upgrade
 ```
 
-### Erro de importação
+### Erros de importação
 ```bash
 pip install -r requirements.txt --upgrade
 ```
 
-### Dados não carregam
+### Dados não carregam - Teste da biblioteca Yfinance.
 - Verifique conexão com internet
 - Teste: `python -c "import yfinance; print(yfinance.Ticker('PETR4.SA').history(period='1d'))"`
 
-### Para mais soluções
-Consulte **[INSTALACAO.md](INSTALACAO.md)** para diagnósticos detalhados.
 
-## ✅ Exemplo de Uso Interativo
+## Exemplo de Uso:
 
 ```bash
 # 1. Iniciar sistema
-python exemplo_uso.py
+python StartApp.py
 
 # 2. Navegar pelos menus
 Digite "1" → Empresas Brasileiras
@@ -268,31 +242,9 @@ AnalisadorB3()
 └── menu_*()                         # Sistema de navegação
 ```
 
-## 🆕 **Novidades da Versão Interativa**
-
-### **✨ Gráficos Totalmente Interativos**
-- **🖱️ Mouse hover** para valores precisos
-- **📊 Tooltips informativos** com data e valor
-- **📍 Destaque automático** de valores importantes
-- **🎨 Anotações visuais** em pontos-chave
-
-### **📈 Visualizações Aprimoradas**
-- **Valores sobre pontos/barras** para leitura rápida
-- **Cores intuitivas** (verde=positivo, vermelho=negativo)
-- **Formatação de datas** melhorada
-- **Grid e escalas** otimizadas
-
-### **🔧 Melhorias Técnicas**
-- **Backend TkAgg** para máxima compatibilidade
-- **Eventos de mouse** personalizados
-- **Limpeza automática** de anotações
-- **Performance otimizada** para gráficos grandes
-
----
-
 **Desenvolvido com Python + Matplotlib Interativo + yfinance + Pandas**
 
-🚀 **Para começar**: `python exemplo_uso.py`  
-📋 **Para instalação**: veja `INSTALACAO.md`  
-🧪 **Para testar**: `python teste_sistema.py`  
+🚀 **Para começar**: `python StartApp.py`  
+📋 **Para instalação**: pip install -r requirements.txt`  
+🧪 **Para testar**: `python -c "import yfinance; print(yfinance.Ticker('PETR4.SA').history(period='1d'))"`  
 🖱️ **Para interagir**: passe o mouse sobre os gráficos!
